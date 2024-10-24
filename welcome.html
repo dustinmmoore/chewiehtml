@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Chewbacca 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure all content is in lowercase */
+        body {
+            text-transform: lowercase;
+        }
+
+        /* Custom welcome page styling */
+        .welcome-body {
+            background-color: #000; /* Black background to match the homepage */
+            color: #FFD700; /* Star Wars gold color */
+            font-family: 'Jedi', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .star-wars-intro {
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+            animation: scroll 10s ease-out 1; /* Add a scroll-like effect */
+            perspective: 400px;
+        }
+
+        .intro-content h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .intro-content p {
+            font-size: 1.5em;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the redirect link */
+        .redirect-link {
+            color: #FFD700; /* Star Wars gold color */
+            text-decoration: underline;
+        }
+
+        .redirect-link:hover {
+            color: #fff; /* Hover effect to white */
+        }
+
+        /* Placeholder image styling */
+        .intro-image {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+            position: relative;
+            animation: moveImage 5s ease-out forwards; /* Move image animation */
+        }
+
+        /* Keyframes for the image animation */
+        @keyframes moveImage {
+            0% {
+                transform: translateY(-100%); /* Start off-screen above */
+            }
+            50% {
+                transform: translateY(20%); /* Move down halfway */
+            }
+            100% {
+                transform: translateY(0); /* Stop in the middle */
+            }
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0%);
+            }
+        }
+    </style>
+    <script>
+        // Auto-redirect after 10 seconds
+        setTimeout(function() {
+            window.location.href = "new.html"; // Add your homepage URL here
+        }, 10000);
+    </script>
+</head>
+<body class="welcome-body">
+    <img src="bacca.png" alt="bacca" class="intro-image">
+    <div class="star-wars-intro">
+        <div class="intro-content">
+            <h1>Welcome to the reimagined Chewbacca 2024 Campaign!</h1>
+            <p>“Roaring for a better galaxy, one vote at a time!”</p>
+            <p>If you are not automatically redirected in 10 seconds, please <a href="new.html" class="redirect-link">click here</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

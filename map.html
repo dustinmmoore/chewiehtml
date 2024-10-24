@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chewbacca 2024 - Map</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure all content is in lowercase except for markers */
+        body {
+            text-transform: lowercase;
+        }
+
+        /* Style for the Jedi font */
+        @font-face {
+            font-family: 'Jedi';
+            src: url('path-to-jedi-font.ttf'); /* Ensure the path to the font is correct */
+        }
+
+        .jedi-font {
+            font-family: 'Jedi', sans-serif;
+        }
+
+        /* Layout for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .banner-img {
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .middle-content {
+            text-align: center;
+            font-family: 'Jedi', sans-serif;
+            padding: 40px 20px;
+            background-color: #000;
+            color: #FFD700;
+            position: relative;
+        }
+
+        .middle-content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Map container styling */
+        .map-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* South Carolina map image */
+        .map-image {
+            width: 100%;
+            height: auto;
+            border: 2px solid #FFD700;
+        }
+
+        /* Chewbacca face markers */
+        .marker {
+            position: absolute;
+            width: 50px; /* Adjusted marker size */
+            height: 50px;
+            cursor: pointer;
+        }
+
+        /* Adjust the image size inside markers */
+        .marker img {
+            width: 100%;  /* Make sure image fits the marker */
+            height: auto;  /* Keep aspect ratio */
+        }
+
+        /* Tooltip styling */
+        .tooltip {
+            position: absolute;
+            background-color: #000;
+            color: #FFD700;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            white-space: nowrap;
+            z-index: 10;
+            text-transform: none; /* Ensure proper capital letters */
+        }
+
+        /* Show tooltip on hover */
+        .marker:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Adjust Chewbacca's face positions over specific cities */
+        .marker.columbia {
+            top: 35%;
+            left: 44%;
+        }
+
+        .marker.charleston {
+            top: 70%;
+            left: 65%;
+        }
+
+        .marker.greenville {
+            top: 10%;
+            left: 22%;
+        }
+
+        .marker.myrtlebeach {
+            top: 43%;
+            left: 85%;
+        }
+
+        .marker.spartanburg {
+            top: 10%;
+            left: 30%;
+        }
+
+        .marker.rockhill {
+            top: 10%;
+            left: 48%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <div class="banner">
+                    <img src="ychewie.png" alt="Kashyyyk and Chewbacca Banner" class="banner-img">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="new.html" title="Welcome to the Chewbacca 2024 campaign.">Home</a></li>
+                        <li><a href="bio.html" title="Learn more about Chewbacca's history and achievements.">Bio</a></li>
+                        <li><a href="sched.html" title="Check out Chewbacca's campaign schedule.">Schedule</a></li>
+                        <li><a href="map.html" title="Find polling locations and campaign events on the map.">Map</a></li>
+                        <li><a href="feed.html" title="Send your feedback and comments.">Feedback</a></li>
+                    </ul>
+                </nav>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="middle-content">
+                    <h2>Chewbacca's Campaign Stops in South Carolina</h2>
+                    <div class="map-container">
+                        <img src="map.jpg" alt="Map of South Carolina" class="map-image">
+                        
+                        <!-- Chewbacca markers with tooltips -->
+                        <div class="marker columbia">
+                            <a href="loc2.html">
+                            <img src="mapc.png" alt="Chewbacca">
+                            <div class="tooltip">Columbia, SC: Leadership Summit<br>November 12, 2024</div>
+                            </a>
+                        </div>
+                        <div class="marker charleston">
+                            <a href="loc3.html">
+                            <img src="mapc.png" alt="Chewbacca">
+                            <div class="tooltip">Charleston, SC: Galactic Unity Conference<br>November 30, 2024</div>
+                            </a>
+                        </div>
+                        <div class="marker greenville">
+                            <a href="loc1.html">
+                            <img src="mapc.png" alt="Chewbacca">
+                            <div class="tooltip">Greenville, SC: Wookiee Wisdom Talk<br>December 5, 2024</div>
+                            </a>
+                        </div>
+                        <div class="marker myrtlebeach">
+                            <a href="loc4.html">
+                            <img src="mapc.png" alt="Chewbacca">
+                            <div class="tooltip">Myrtle Beach, SC: Future of the Galaxy Symposium<br>December 20, 2024</div>
+                            </a>
+                        </div>
+                        <div class="marker spartanburg">
+                            <a href="loc5.html">
+                            <img src="mapc.png" alt="Chewbacca">
+                            <div class="tooltip">Spartanburg, SC: Galactic Economy Forum<br>January 10, 2025</div>
+                            </a>
+                        </div>
+                        <div class="marker rockhill">
+                            <a href="loc6.html">
+                            <img src="mapc.png" alt="Chewbacca">
+                            <div class="tooltip">Rock Hill, SC: Campaign Rally<br>January 25, 2025</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <footer>
+                    <p>paid for by the wookiee defense coalition - chewbacca 2024</p>
+                </footer>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chewbacca 2024 - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure all content is in lowercase */
+        body {
+            text-transform: lowercase;
+        }
+
+        /* Style for the Jedi font */
+        @font-face {
+            font-family: 'Jedi';
+            src: url('path-to-jedi-font.ttf'); /* Make sure to provide the correct path */
+        }
+
+        .jedi-font {
+            font-family: 'Jedi', sans-serif;
+        }
+
+        /* Layout for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .banner-img {
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .middle-content {
+            text-align: center;
+            font-family: 'Jedi', sans-serif;
+            padding: 20px;
+        }
+
+        /* Star Wars scrolling text effect */
+        .scrolling-text-container {
+            position: relative;
+            height: 800px; /* Increase the height of the middle section */
+            width: 100%;
+            overflow: hidden;
+            perspective: 400px;
+            text-align: center;
+            background-color: #000; /* Set background to black */
+            color: #FFD700; /* Star Wars gold color */
+        }
+
+        .scrolling-text {
+            position: absolute;
+            bottom: -100%; /* Start the text from the very bottom */
+            width: 80%;
+            margin: 0 auto;
+            margin-left: 10%; /* Shift the text a bit to the right */
+            animation: scroll 25s linear infinite; /* Adjusted duration for smoother scroll */
+            transform-origin: 50% 100%;
+            transform: rotateX(20deg);
+            font-family: 'Jedi', sans-serif;
+            font-size: 1.5em;
+            line-height: 1.5em;
+            text-align: center; /* Keep the text centered within the box */
+        }
+
+        /* Keyframes for the scroll effect */
+        @keyframes scroll {
+            0% {
+                bottom: -100%; /* Start the text completely from the bottom */
+            }
+            100% {
+                bottom: 100%; /* End at the top */
+            }
+        }
+
+        /* Placeholder image style */
+        .scrolling-text img {
+            display: block;
+            margin: 20px auto;
+            width: 200px; /* Adjust the size of the placeholder image */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <div class="banner">
+                    <img src="ychewie.png" alt="Kashyyyk and Chewbacca Banner" class="banner-img">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="new.html" title="Welcome to the Chewbacca 2024 campaign.">Home</a></li>
+                        <li><a href="bio.html" title="Learn more about Chewbacca's history and achievements.">Bio</a></li>
+                        <li><a href="sched.html" title="Check out Chewbacca's campaign schedule.">Schedule</a></li>
+                        <li><a href="map.html" title="Find polling locations and campaign events on the map.">Map</a></li>
+                        <li><a href="feed.html" title="Send your feedback and comments.">Feedback</a></li>
+                    </ul>
+                </nav>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="scrolling-text-container">
+                    <div class="scrolling-text">
+                        <p>
+                            In a galaxy not so far, far away... <br><br>
+                            A new hope arises for the galaxy, and that hope is Chewbacca. <br><br>
+                            The Wookiee warrior from Kashyyyk has fought alongside the greatest heroes of the galaxy. <br><br>
+                            His bravery, strength, and loyalty to his friends make him the perfect candidate to lead in 2024. <br><br>
+                            Under Chewbacca's leadership, the galaxy will see peace, justice, and equality for all. <br><br>
+                            Wookiees and humans, droids and aliens — all beings will thrive under his wise and compassionate rule. <br><br>
+                            Vote Chewbacca 2024 for a brighter, unified galaxy. May the Force be with us all!
+                        </p>
+                        <!-- Placeholder image below the speech -->
+                        <img src="chewie.jpg" alt="chewie">
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <footer>
+                    <p>paid for by the wookiee defense coalition - chewbacca 2024</p>
+                </footer>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chewbacca 2024 - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure all content is in lowercase except the table */
+        body {
+            text-transform: lowercase;
+        }
+
+        /* Prevent text-transform for the table */
+        .engagement-table {
+            text-transform: none; /* Disable lowercase text-transform for the table */
+        }
+
+        /* Style for the Jedi font */
+        @font-face {
+            font-family: 'Jedi';
+            src: url('path-to-jedi-font.ttf'); 
+        }
+
+        .jedi-font {
+            font-family: 'Jedi', sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .banner-img {
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .middle-content {
+            text-align: center;
+            font-family: 'Jedi', sans-serif;
+            padding: 40px 20px;
+            background-color: #000; 
+            color: #FFD700; 
+        }
+
+        .middle-content h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        /* Table styling */
+        .engagement-table {
+            width: 80%;
+            margin: 0 auto;
+            border: 2px solid #FFD700;
+            border-collapse: collapse;
+            color: #FFF;
+            font-size: 1.2em;
+        }
+
+        .engagement-table th, .engagement-table td {
+            border: 1px solid #FFD700;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .engagement-table th {
+            background-color: #444;
+        }
+
+        .engagement-table td {
+            background-color: #222;
+        }
+
+        /* Video container */
+        .video-container {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Button styling */
+        .map-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #FFD700; /* Star Wars gold color */
+            color: #000;
+            font-family: 'Jedi', sans-serif;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+        }
+
+        .map-button:hover {
+            background-color: #fff; /* Change to white on hover */
+            color: #000;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="2">
+                <div class="banner">
+                    <img src="ychewie.png" alt="Kashyyyk and Chewbacca Banner" class="banner-img">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="new.html" title="Welcome to the Chewbacca 2024 campaign.">Home</a></li>
+                        <li><a href="bio.html" title="Learn more about Chewbacca's history and achievements.">Bio</a></li>
+                        <li><a href="sched.html" title="Check out Chewbacca's campaign schedule.">Schedule</a></li>
+                        <li><a href="map.html" title="Find polling locations and campaign events on the map.">Map</a></li>
+                        <li><a href="feed.html" title="Send your feedback and comments.">Feedback</a></li>
+                    </ul>
+                </nav>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="middle-content">
+                    <iframe class="video-container" src="https://www.youtube.com/embed/0W4xnv8HZjM" title="Chewbacca Campaign Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    <h2>Upcoming Speaking Engagements in South Carolina</h2>
+                    <table class="engagement-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Location</th>
+                                <th>Event</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>November 12, 2024</td>
+                                <td>Columbia, SC</td>
+                                <td>Chewbacca's Leadership Summit</td>
+                            </tr>
+                            <tr>
+                                <td>November 30, 2024</td>
+                                <td>Charleston, SC</td>
+                                <td>Galactic Unity Conference</td>
+                            </tr>
+                            <tr>
+                                <td>December 5, 2024</td>
+                                <td>Greenville, SC</td>
+                                <td>Wookiee Wisdom Talk</td>
+                            </tr>
+                            <tr>
+                                <td>December 20, 2024</td>
+                                <td>Myrtle Beach, SC</td>
+                                <td>Future of the Galaxy Symposium</td>
+                            </tr>
+                            <tr>
+                                <td>January 10, 2025</td>
+                                <td>Spartanburg, SC</td>
+                                <td>Galactic Economy Forum</td>
+                            </tr>
+                            <tr>
+                                <td>January 25, 2025</td>
+                                <td>Rock Hill, SC</td>
+                                <td>Chewbacca's Campaign Rally</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Map of Upcoming Events Button -->
+                    <a href="map.html" class="map-button">Map of Upcoming Events</a>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <footer>
+                    <p>paid for by the wookiee defense coalition - chewbacca 2024</p>
+                </footer>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

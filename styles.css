@@ -1,0 +1,250 @@
+/* Importing Star Wars font */
+@font-face {
+    font-family: 'StarJedi';
+    src: url('fonts/Starjedi.ttf') format('truetype'); /* Replace with actual path to your font */
+}
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background for homepage */
+    background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat; /* Stardust background */
+}
+
+h1, h2, p {
+    font-family: 'StarJedi', sans-serif; /* Apply the Star Wars font to headings and text */
+    color: #FFD700; /* Star Wars gold */
+    text-align: center;
+}
+
+/* Welcome Page Styles */
+.welcome-body {
+    background-color: rgba(0, 0, 0, 0.8); /* Add a slight transparency over the starry background */
+    color: #FFD700; /* Star Wars gold */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
+    height: 100vh;
+    background: #000 url('https://www.transparenttextures.com/patterns/stardust.png') repeat; /* Stardust background for welcome page */
+}
+
+.welcome-container {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #FFD700; /* Star Wars gold border */
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Add transparency to the container */
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.chewbacca-img {
+    max-width: 200px; /* Limit the size of the image */
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Homepage Styles */
+.banner {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.banner-img {
+    max-width: 100%; /* Full width banner */
+    height: auto;
+    border: 1px solid #FFD700; /* Star Wars gold outline */
+    border-radius: 10px; /* Add some rounding for a sleek look */
+}
+
+.navbar {
+    background-color: #000;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+    position: relative; /* Required for positioning the tooltip */
+}
+
+/* Navbar links with hover effect */
+.navbar ul li a {
+    font-family: 'StarJedi', sans-serif; /* Apply the Star Wars font to navbar links */
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    padding: 10px;
+}
+
+.navbar ul li a:hover {
+    color: #fff; /* Change the link color to white on hover */
+}
+
+/* Tooltip effect on hover */
+.navbar ul li a::after {
+    content: attr(title); /* Fetch the tooltip text from the title attribute */
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    color: #FFD700; /* Gold text color */
+    padding: 5px 10px;
+    border-radius: 5px;
+    top: 100%; /* Position the tooltip below the link */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap; /* Prevent text from wrapping */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    z-index: 1; /* Ensure it appears above other elements */
+    font-size: 12px; /* Adjust font size */
+}
+
+.navbar ul li a:hover::after {
+    opacity: 1; /* Show the tooltip on hover */
+    visibility: visible;
+}
+
+main {
+    margin: 20px auto;
+    width: 90%; /* Ensure responsiveness */
+    max-width: 1200px; /* Limit max width for larger screens */
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%; /* Reduce the width to prevent the table from distorting the banner */
+    max-width: 800px; /* Limit the max width of the table */
+}
+
+table, th, td {
+    border: 2px solid #FFD700;
+    padding: 10px;
+    color: white;
+}
+
+th {
+    background-color: #333;
+}
+
+td {
+    background-color: #222;
+}
+
+footer {
+    background-color: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Remove fixed position to adapt better on mobile */
+}
+
+/* Middle content section with solid black background */
+.middle-content {
+    text-align: center;
+    font-family: 'Jedi', sans-serif;
+    padding: 40px 20px;
+    background-color: #000; /* Set background to solid black */
+    color: #FFD700; /* Star Wars gold color */
+}
+
+/* Bio image placed in upper right with text flowing around */
+.bio-image {
+    float: right;
+    width: 200px; /* Smaller size */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 0 20px 20px; /* Spacing to the left and bottom */
+    border-radius: 50%; /* Rounded image */
+}
+
+/* Button styling for Map of Upcoming Events */
+.map-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #FFD700; /* Star Wars gold color */
+    color: #000;
+    font-family: 'Jedi', sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-transform: none; /* Ensure proper capitalization */
+}
+
+.map-button:hover {
+    background-color: #fff; /* Change to white on hover */
+    color: #000;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .welcome-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .chewbacca-img {
+        max-width: 150px;
+    }
+
+    .banner-img {
+        border: 4px solid #FFD700;
+    }
+}
+
+@media (max-width: 480px) {
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    table, th, td {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .chewbacca-img {
+        max-width: 120px;
+    }
+
+    .banner-img {
+        border: 3px solid #FFD700;
+    }
+}
